@@ -1,13 +1,98 @@
+*{
+  margin: 0;
+}
+
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
 }
+
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #026cdf;
+  border: solid;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  color: #24242b;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+
 .main-header{
-  background-color: green;
+height: 80vh;
+background-image: url('./assets/background.jpg');
+
+/* border: solid red; */
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.top-header{
+  display: flex;
+  justify-content: space-around;
+  height: 100px;
+  align-items: center;
+  background-color: #026cdf;
   width: 100%;
 }
 
+.top-header h2{
+  font-size: 2em;
+}
+
+.selling-text{
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  gap: 30px;
+  font-size: 1.6em;
+
+}
+
+.cta{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2em;
+}
+.sub-cta{
+  margin-top: 20px;
+width: 50%;
+display: flex;
+gap: 2%;
+align-items: center;
+}
+
+.sub-cta input{
+  width: 70%;
+  height: 40px;
+  opacity: 0.6;
+}
+.sub-cta button{
+  width:30%;
+}
 
 
 
