@@ -1,15 +1,13 @@
-*{
+* {
   margin: 0;
-}
 
+}
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
 }
-
-
 
 h1 {
   font-size: 3.2em;
@@ -35,18 +33,17 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-
-.main-header{
-height: 80vh;
-background-image: url('https://www.icmp.ac.uk/sites/default/files/new/how_to_promote_live_events_blog_2022_1.jpg');
-display: flex;
-flex-direction: column;
-align-items: center;
-/* border: solid; */
-gap: 30%;
+.main-header {
+  height: 80vh;
+  background-image: url("https://www.icmp.ac.uk/sites/default/files/new/how_to_promote_live_events_blog_2022_1.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: solid; */
+  gap: 30%;
 }
 
-.top-header{
+.top-header {
   display: flex;
   justify-content: space-around;
   height: 100px;
@@ -56,22 +53,20 @@ gap: 30%;
   /* border: solid; */
 }
 
-.top-header h2{
+.top-header h2 {
   font-size: 2em;
 }
 
-.selling-text{
-  /* border: solid green; */
+.selling-text {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   gap: 30px;
   font-size: 1.6em;
 }
 
-.cta{
-
+.cta {
   /* border: solid; */
   margin-top: 20px;
   display: flex;
@@ -79,26 +74,69 @@ gap: 30%;
   align-items: center;
   font-size: 1.2em;
 }
-.sub-cta{
+.sub-cta {
   /* border: solid; */
   margin-top: 20px;
-width: 50%;
-display: flex;
-gap: 2%;
-align-items: center;
+  width: 50%;
+  display: flex;
+  gap: 2%;
+  align-items: center;
 }
 
-.sub-cta input{
+.sub-cta input {
   width: 70%;
   height: 40px;
   opacity: 0.6;
 }
-.sub-cta button{
-  width:30%;
+.sub-cta button {
+  width: 30%;
 }
 
+/* ------- */
 
+.steps-cont{
+  padding-top: 50px;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.steps-cont header h1{
+  font-size: 3em;
+}
+.steps-cont section{
+  /* border: solid red; */
+display: flex;
+width: 60%;
+justify-content: space-evenly;
+height: 300px;
+align-items: center;
+margin-bottom: 20px;
+}
 
+.steps-cont section img{
+  height: 200px;
+}
 
+.steps{
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5%;
+  width: 50%;
+}
 
+.steps h2{
+  font-size: 2.7em;
+}
+.steps p{
+  font-size: 1.2em;
+}
+
+.divider{
+  height: 10px;
+  width: 100%;
+  background-color: #026cdf;
+opacity: 0.6;}
