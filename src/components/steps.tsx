@@ -32,7 +32,6 @@ export const Steps = () => {
                 <p>When your tickets sell, you’ll get paid via your selected method of payment typically within 17 days, provided we have all the necessary information.</p>
             </div>
       </section>
-            {/* <div className='divider'></div> */}
     </main>
     </>
   );
