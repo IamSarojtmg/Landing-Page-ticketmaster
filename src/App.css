@@ -157,22 +157,28 @@ button:focus-visible {
 
 }
 .questions{
-  /* border: solid; */
   width: 100%;
   height: 30px;
   cursor: pointer;
-  transition: transform 1s;
-  transform: translatey(10%);
 }
 
 
-/* working here but still no animation  */
-.ans{color: red;
-transition: transform 1s;
-transform: translatey(10%);
+/* animation classes- answer, show, hide */
+
+.answer {
+  transition: ease-out 1s;  /*the animation and length*/
+} 
+
+.show{
+  max-height: 100%;  /*stop the text overflowing with the question num 2*/
+  opacity: 1;
 }
 
 .hide{
-  display: none;
+  max-height: 0; /*gets rid of the max hide used on .show*/
+  opacity: 0;
 }
 
+
+
+/*  */

@@ -3,7 +3,6 @@ import { useState } from "react";
 export const Faq = () => {
   const [count, setCount] = useState<number>(2);
   const [hidden, setHide] = useState<boolean>(false);
-  const [animate, setAnimate] = useState<boolean>(false);
 
   function showFaq() {
     let newCount = 1;
@@ -20,16 +19,23 @@ export const Faq = () => {
     }
   }
 
-  const ansOne = (
-    <div className="ans">
-      To start selling, create a seller account by entering your email and
-      following the setup instructions.
-    </div>
-  );
-  const close = <span></span>;
+  interface qandaInterface {
+    question: string;
+    answer: string;
+  }
 
-  //changes on line 41 - setted the class toggel according to the hidden use state
-  //go to css file
+  const questionAnswers: qandaInterface[] = [
+    {
+      question: "How do I start selling on Ticketmaster?",
+      answer:
+        "To start selling, create a seller account by entering your email and following the setup instructions.",
+    },
+    {
+      question: "What types of tickets can I sell?",
+      answer:
+        "You can sell tickets for concerts, sports events, theater shows, and more.",
+    },
+  ];
 
   return (
     <main className="faq-comp">
@@ -39,18 +45,20 @@ export const Faq = () => {
         <h3 className="questions" onClick={() => showFaq()}>
           How do I start selling on Ticketmaster?
         </h3>
-        <div className={hidden?'ans':'hide'}>
-      To start selling, create a seller account by entering your email and
-      following the setup instructions.
-    </div>
+        <div className={`answer ${hidden ? "show" : "hide"}`}>
+          To start selling, create a seller account by entering your email and
+          following the setup instructions.
+        </div>
       </div>
 
       <div>
-        <h3>What types of tickets can I sell?</h3>
-        <p>
+        <h3 className="questions" onClick={() => showFaq()}>
+          What types of tickets can I sell?
+        </h3>
+        <div className={`answer ${hidden ? "show" : "hide"}`}>
           You can sell tickets for concerts, sports events, theater shows, and
           more..
-        </p>
+        </div>
       </div>
     </main>
   );
