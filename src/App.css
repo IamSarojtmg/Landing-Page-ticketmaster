@@ -152,29 +152,35 @@ button:focus-visible {
   margin-bottom: 15px;
 }
 .qna{
-  border: solid green;
+
   width: 70%;
 
 }
 .questions{
   width: 100%;
-  height: 30px;
+  height: 80px;
   cursor: pointer;
+  border: solid;
+  border: dotted wheat;
 }
 
 
 /* animation classes- answer, show, hide */
 
 .answer {
+  border: green;
   transition: ease-out 1s;  /*the animation and length*/
 } 
 
 .show{
   max-height: 100%;  /*stop the text overflowing with the question num 2*/
   opacity: 1;
+  border: solid purple;
+  color: red;
 }
 
 .hide{
+  border: solid red;
   max-height: 0; /*gets rid of the max hide used on .show*/
   opacity: 0;
 }
