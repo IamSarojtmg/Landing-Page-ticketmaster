@@ -1,13 +1,15 @@
 import "./App.css";
-import { Faq } from "./components/x";
-import {Header} from "./components/header"
+import { Faq } from "./components/faqs";
+import { Header } from "./components/header";
+import { Links } from "./components/links";
 import { Steps } from "./components/steps";
 function App() {
   return (
     <>
-   <Header/>
-   <Steps/>
-   <Faq/>
+      <Header />
+      <Steps />
+      <Faq />
+      <Links />
     </>
   );
 }

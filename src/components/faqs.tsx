@@ -1,7 +1,10 @@
 import { useState } from "react";
 
 export const Faq = () => {
-  const [visibleAnswers, setVisibleAnswers] = useState([false, false]);
+  const [visibleAnswers, setVisibleAnswers] = useState<boolean[]>([
+    false,
+    false,
+  ]);
   const [count, setCount] = useState<number>(2);
   const [hidden, setHide] = useState<boolean>(false);
 
@@ -13,7 +16,6 @@ export const Faq = () => {
       return newCount;
     });
 
-
     if (count % 2 === 0) {
       setHide(true);
     } else {
@@ -21,7 +23,9 @@ export const Faq = () => {
     }
     setVisibleAnswers((prevVisibleAnswers) => {
       const newVisibleAnswers = [...prevVisibleAnswers];
+
       newVisibleAnswers[index] = !newVisibleAnswers[index];
+      console.log(newVisibleAnswers, index, hidden);
       return newVisibleAnswers;
     });
   };
@@ -37,6 +41,10 @@ export const Faq = () => {
       answer:
         "You can sell tickets for concerts, sports events, theater shows, and more.",
     },
+    {
+      question:'How do I get paid?',
+      answer: 'Payments are securely processed and transferred to your designated bank account.'
+    }
   ];
 
   return (
@@ -48,14 +56,15 @@ export const Faq = () => {
             <h3 className="questions" onClick={() => toggleAnswer(index)}>
               {qa.question}
             </h3>
-            {visibleAnswers[index] && (
-              <div className={`answer${hidden ? "show" : "hide"}`}>
-                {qa.answer}
-              </div>
-            )}
+            <div
+              className={`answer ${visibleAnswers[index] ? "show" : "hide"}`}
+            >
+              {qa.answer}
+            </div>
           </div>
         ))}
       </div>
+      <div className="divider"></div>
     </main>
   );
 };
