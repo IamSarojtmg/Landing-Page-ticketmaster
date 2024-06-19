@@ -48,6 +48,8 @@ export const Faq = () => {
   ];
 
   return (
+    <>
+        <div className="divider"></div>
     <main className="faq-comp">
       <h1>FAQ</h1>
       <div className="qna">
@@ -58,13 +60,13 @@ export const Faq = () => {
             </h3>
             <div
               className={`answer ${visibleAnswers[index] ? "show" : "hide"}`}
-            >
+              >
               {qa.answer}
             </div>
           </div>
         ))}
       </div>
-      <div className="divider"></div>
     </main>
+        </>
   );
 };
